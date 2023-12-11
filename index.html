@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mental math</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>mental math</h1>
-    <button type="button" id="start">start</button>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mental math</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="has-background-black">
+
+        <div class="container">
+            <div class="grid">
+                <h1 class="is-size-1">mental math</h1>
+                <button class="button is-primary is-large" id="start">start</button>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        No
+                    </label>
+                </div>
+            </div>
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

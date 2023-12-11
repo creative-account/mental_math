@@ -1,3 +1,118 @@
-.is-fullheight {
-    height: 100%;
+body {
+    height: 100vh; /* 画面の高さいっぱいに広げる */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+
+.container{
+    width: min(100% - 2rem, 640px);
+    margin-inline: auto;
+    text-align: center;
+    height: 100%; /* 要素を中央寄せするために高さを指定 */
+    display: flex; /* 子要素の垂直中央寄せのために flex を使用 */
+    flex-direction: column; /* 子要素を縦方向に配置 */
+    justify-content: center; /* 子要素を縦方向に中央寄せ */
+}
+
+.grid{
+    display: grid;
+    place-items: center;
+}
+
+h1, button {
+    margin: 0; /* デフォルトのマージンを削除 */
+}
+
+.has-background-black{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 4%);
+}
+
+.button{
+    background-color: #fff;
+    border-color: #dbdbdb;
+    border-radius: .375em;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    font-size: 1rem;
+    justify-content: center;
+    padding-bottom: calc(.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(.5em - 1px);
+    text-align: center;
+    user-select: none;
+    white-space: nowrap;
+
+    &.is-small{
+        font-size: .75rem;
+    }
+
+    &.is-normal{
+        font-size: 1rem;
+    }
+
+    &.is-medium{
+        font-size: 1.25rem;
+    }
+
+    &.is-large{
+        font-size: 1.5rem;
+    }
+
+    &.is-primary{
+        background-color: #00d1b2;
+        border-color: transparent;
+        color: #fff;
+        &:hover{
+            background-color: #00c4a7;
+            border-color: transparent;
+            color: #fff;
+        }
+        &:active{
+            background-color: #00b89c;
+            border-color: transparent;
+            color: #fff;
+        }
+        &:focus{
+            border-color: transparent;
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        border-color: #b5b5b5;
+        color: #363636;
+    }
+}
+
+.is-size-1{
+    font-size: 3rem;
+}
+
+.is-size-2{
+    font-size: 2.5rem;
+}
+
+.is-size-3{
+    font-size: 2rem;
+}
+
+.radio{
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.25;
+    position: relative;
+    &:hover{
+        color: hsl(0, 0%, 90%)
+    }
+    &+.radio{
+        margin-left: .5em
+    }
+}
+
